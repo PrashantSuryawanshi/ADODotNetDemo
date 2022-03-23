@@ -30,7 +30,37 @@ namespace DataBaseServer_Conection
        
         private void btnAddNew_Click(object sender, EventArgs e)
         {
-           
+
+            try
+            {
+                //string qry = "select MAX(Id) from Employee";
+                //scb = new SqlCommandBuilder();
+                //con.Open();
+                //object obj = scb.ExecuteScalar();
+                //// DBNullis used to check existance of value in the obj
+                //if (obj == DBNull.Value)
+                //{
+                //    txtId.Text = "1";
+                //}
+                //else
+
+                //{
+                //    int id = Convert.ToInt32(obj);//will get the MAX Id from employee
+                //    id++;
+                //    txtId.Text = id.ToString();
+
+                //}
+                //txtId.Enabled = false;//now textbox value cannot 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+               
+            }
+            finally
+            {
+                con.Close();
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
